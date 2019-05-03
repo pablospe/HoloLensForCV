@@ -19,8 +19,12 @@ import sqlite3
 import shutil
 import json
 import subprocess
-import urllib.request
 import numpy as np
+
+try:
+    from urllib.request import urlopen
+except ImportError:
+    from urllib2 import urlopen
 
 
 def parse_args():
